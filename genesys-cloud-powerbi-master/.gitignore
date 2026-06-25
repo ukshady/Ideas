@@ -1,0 +1,7 @@
+Genesys_Cloud/bin/
+Genesys_Cloud/obj/
+*.env
+*.log
+log/
+logs/
+tmp/

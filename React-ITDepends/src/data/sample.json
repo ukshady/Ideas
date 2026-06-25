@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    { "id": "entra", "label": "Entra ID", "type": "infra" },
+    { "id": "sql", "label": "Azure SQL", "type": "infra" },
+    { "id": "app", "label": "App Service", "type": "infra" },
+    { "id": "auth-service", "label": "Auth Service", "type": "infra" },
+    { "id": "customer-portal", "label": "Customer Portal", "type": "business" },
+    { "id": "billing", "label": "Billing Service", "type": "business" },
+    { "id": "reporting", "label": "Reporting", "type": "business" }
+  ],
+  "links": [
+    { "source": "entra", "target": "auth-service", "critical": true },
+    { "source": "auth-service", "target": "customer-portal", "critical": true },
+    { "source": "app", "target": "customer-portal", "critical": false },
+    { "source": "sql", "target": "billing", "critical": true },
+    { "source": "auth-service", "target": "billing", "critical": false },
+    { "source": "sql", "target": "reporting", "critical": false },
+    { "source": "billing", "target": "reporting", "critical": true }
+  ]
+}
