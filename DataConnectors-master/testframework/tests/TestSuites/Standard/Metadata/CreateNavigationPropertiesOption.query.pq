@@ -1,1 +1,0 @@
-(parameter) => Table.ColumnNames(Table.FirstN(parameter[taxi_table], 1))

@@ -1,0 +1,326 @@
+{
+  "nodes": [
+    {
+      "id": "entra",
+      "label": "Entra ID",
+      "type": "infra"
+    },
+    {
+      "id": "Keystone",
+      "label": "Keystone",
+      "type": "infra"
+    },
+    {
+      "id": "Civica CX",
+      "label": "Civica CX",
+      "type": "business"
+    },
+    {
+      "id": "Genesys Cloud CX",
+      "label": "Genesys Cloud CX",
+      "type": "business"
+    },
+    {
+      "id": "Sharepoint Online",
+      "label": "Sharepoint Online",
+      "type": "infra"
+    },
+    {
+      "id": "Microsoft 365",
+      "label": "Microsoft 365",
+      "type": "infra"
+    },
+    {
+      "id": "Exchange online",
+      "label": "Exchange online",
+      "type": "infra"
+    },
+    {
+      "id": "Gov Notify",
+      "label": "Gov Notify",
+      "type": "infra"
+    },
+    {
+      "id": "Public Access Computing",
+      "label": "Public Access Computing",
+      "type": "business"
+    },
+    {
+      "id": "MYPC",
+      "label": "MYPC",
+      "type": "infra"
+    },
+    {
+      "id": "Google Admin Portal",
+      "label": "Google Admin Portal",
+      "type": "infra"
+    },
+    {
+      "id": "Library Management System",
+      "label": "Library Management System",
+      "type": "business"
+    },
+    {
+      "id": "Identity Management",
+      "label": "Identity Management",
+      "type": "business"
+    },
+    {
+      "id": "Richard Hill",
+      "label": "Richard Hill",
+      "type": "business"
+    },
+    {
+      "id": "Mehar Reehal",
+      "label": "Mehar Reehal",
+      "type": "business"
+    },
+    {
+      "id": "Azure Portal",
+      "label": "Azure Portal",
+      "type": "infra"
+    },
+    {
+      "id": "ITSM",
+      "label": "ITSM",
+      "type": "business"
+    },
+    {
+      "id": "Provance ITSM",
+      "label": "Provance ITSM",
+      "type": "infra"
+    },
+    {
+      "id": "MS Dynamics",
+      "label": "MS Dynamics",
+      "type": "infra"
+    },
+    {
+      "id": "Dynamics F&O",
+      "label": "Dynamics F&O",
+      "type": "infra"
+    },
+    {
+      "id": "Finance Service",
+      "label": "Finance Service",
+      "type": "business"
+    },
+    {
+      "id": "MS Teams",
+      "label": "MS Teams",
+      "type": "infra"
+    },
+    {
+      "id": "Data Centre Services",
+      "label": "Data Centre Services",
+      "type": "infra"
+    },
+    {
+      "id": "Apex Data Centre",
+      "label": "Apex Data Centre",
+      "type": "infra"
+    },
+    {
+      "id": "Civic Data Centre",
+      "label": "Civic Data Centre",
+      "type": "infra"
+    },
+    {
+      "id": "MS Fabric",
+      "label": "MS Fabric",
+      "type": "infra"
+    },
+    {
+      "id": "Azure Integration Service",
+      "label": "Azure Integration Service",
+      "type": "infra"
+    },
+    {
+      "id": "Civica Spydus",
+      "label": "Civica Spydus",
+      "type": "business"
+    },
+    {
+      "id": "PowerBI service",
+      "label": "PowerBI service",
+      "type": "infra"
+    },
+    {
+      "id": "Data Analytics",
+      "label": "Data Analytics",
+      "type": "business"
+    }
+  ],
+  "links": [
+    {
+      "source": "Civica CX",
+      "target": "Keystone",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Genesys Cloud CX",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Sharepoint Online",
+      "critical": true
+    },
+    {
+      "source": "Exchange online",
+      "target": "Microsoft 365",
+      "critical": true
+    },
+    {
+      "source": "Sharepoint Online",
+      "target": "Microsoft 365",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Microsoft 365",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Exchange online",
+      "critical": true
+    },
+    {
+      "source": "Gov Notify",
+      "target": "Genesys Cloud CX",
+      "critical": false
+    },
+    {
+      "source": "Google Admin Portal",
+      "target": "Public Access Computing",
+      "critical": true
+    },
+    {
+      "source": "MYPC",
+      "target": "Public Access Computing",
+      "critical": true
+    },
+    {
+      "source": "Library Management System",
+      "target": "MYPC",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Google Admin Portal",
+      "critical": false
+    },
+    {
+      "source": "entra",
+      "target": "Identity Management",
+      "critical": true
+    },
+    {
+      "source": "Richard Hill",
+      "target": "Identity Management",
+      "critical": false
+    },
+    {
+      "source": "Mehar Reehal",
+      "target": "Identity Management",
+      "critical": false
+    },
+    {
+      "source": "Azure Portal",
+      "target": "Identity Management",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "Azure Portal",
+      "critical": true
+    },
+    {
+      "source": "Azure Portal",
+      "target": "Google Admin Portal",
+      "critical": true
+    },
+    {
+      "source": "MS Dynamics",
+      "target": "Provance ITSM",
+      "critical": true
+    },
+    {
+      "source": "entra",
+      "target": "MS Dynamics",
+      "critical": true
+    },
+    {
+      "source": "Provance ITSM",
+      "target": "ITSM",
+      "critical": true
+    },
+    {
+      "source": "MS Teams",
+      "target": "Microsoft 365",
+      "critical": false
+    },
+    {
+      "source": "Apex Data Centre",
+      "target": "Data Centre Services",
+      "critical": true
+    },
+    {
+      "source": "Civic Data Centre",
+      "target": "Data Centre Services",
+      "critical": true
+    },
+    {
+      "source": "Exchange online",
+      "target": "Genesys Cloud CX",
+      "critical": false
+    },
+    {
+      "source": "Azure Integration Service",
+      "target": "Gov Notify",
+      "critical": false
+    },
+    {
+      "source": "Azure Integration Service",
+      "target": "Genesys Cloud CX",
+      "critical": false
+    },
+    {
+      "source": "Genesys Cloud CX",
+      "target": "MS Fabric",
+      "critical": false
+    },
+    {
+      "source": "MYPC",
+      "target": "MS Fabric",
+      "critical": false
+    },
+    {
+      "source": "Civica Spydus",
+      "target": "Library Management System",
+      "critical": true
+    },
+    {
+      "source": "Dynamics F&O",
+      "target": "Finance Service",
+      "critical": true
+    },
+    {
+      "source": "MS Dynamics",
+      "target": "Dynamics F&O",
+      "critical": true
+    },
+    {
+      "source": "MS Fabric",
+      "target": "PowerBI service",
+      "critical": true
+    },
+    {
+      "source": "MS Fabric",
+      "target": "Data Analytics",
+      "critical": true
+    }
+  ]
+}

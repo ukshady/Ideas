@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import Graph from './components/Graph'
 import data from './data/sample.json'
 
@@ -18,12 +18,44 @@ export default function App() {
       return raw ? JSON.parse(raw) : data.links
     } catch (e) { return data.links }
   })
+  const [backendAvailable, setBackendAvailable] = useState(false)
+
+  useEffect(() => {
+    fetch('/api/graph')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok')
+        return res.json()
+      })
+      .then(data => {
+        if (data?.nodes && data?.links) {
+          setNodes(data.nodes)
+          setLinks(data.links)
+        }
+        setBackendAvailable(true)
+      })
+      .catch(() => {
+        setBackendAvailable(false)
+      })
+  }, [])
 
   const persist = (nextNodes, nextLinks) => {
     try {
       localStorage.setItem('itdepends_nodes', JSON.stringify(nextNodes))
       localStorage.setItem('itdepends_links', JSON.stringify(nextLinks))
     } catch (e) { }
+
+    fetch('/api/graph', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nodes: nextNodes, links: nextLinks })
+    })
+      .then(res => {
+        if (res.ok) setBackendAvailable(true)
+        else setBackendAvailable(false)
+      })
+      .catch(() => {
+        setBackendAvailable(false)
+      })
   }
 
   const toggleFailure = (id) => {
@@ -224,6 +256,7 @@ export default function App() {
 
           <div style={{ marginTop: 12 }}>
             <h3>Controls & Results</h3>
+            <div><strong>Backend status:</strong> {backendAvailable ? 'available' : 'unavailable'}</div>
             <div><strong>Failed:</strong> {Array.from(failedSet).join(', ') || 'none'}</div>
             <div><strong>Impacted business services:</strong> {impactedBusiness.map(n => n.label).join(', ') || 'none'}</div>
           </div>

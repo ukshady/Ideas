@@ -1,1 +1,0 @@
-Language file for [Notepad++](https://notepad-plus-plus.org/)

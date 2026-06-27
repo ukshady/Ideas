@@ -1,4 +1,0 @@
-{
-    "powerquery.general.mode": "SDK",
-    "powerquery.sdk.defaultExtension": "${workspaceFolder}\\bin\\AnyCPU\\Debug\\${workspaceFolderBasename}.mez"
-}
